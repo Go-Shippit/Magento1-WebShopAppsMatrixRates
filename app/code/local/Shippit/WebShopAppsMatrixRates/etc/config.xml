@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Shippit Pty Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the terms
+ * that is available through the world-wide-web at this URL:
+ * http://www.shippit.com/terms
+ *
+ * @category   Shippit
+ * @copyright  Copyright (c) Shippit Pty Ltd (http://www.shippit.com)
+ * @author     Matthew Muscat <matthew@mamis.com.au>
+ * @license    http://www.shippit.com/terms
+ */
+-->
+<config>
+    <modules>
+        <Shippit_WebShopAppsMatrixRates>
+            <version>4.8.0</version>
+        </Shippit_WebShopAppsMatrixRates>
+    </modules>
+
+    <global>
+        <blocks>
+            <shippit_webshopappsmatrixrates>
+                <class>Shippit_WebShopAppsMatrixRates_Block</class>
+            </shippit_webshopappsmatrixrates>
+        </blocks>
+
+        <helpers>
+            <shippit_webshopappsmatrixrates>
+                <class>Shippit_WebShopAppsMatrixRates_Helper</class>
+            </shippit_webshopappsmatrixrates>
+        </helpers>
+
+        <models>
+            <shippit_webshopappsmatrixrates>
+                <class>Shippit_WebShopAppsMatrixRates_Model</class>
+            </shippit_webshopappsmatrixrates>
+
+            <shippit>
+                <rewrite>
+                    <system_config_source_shipping_methods>Shippit_WebShopAppsMatrixRates_Model_System_Config_Source_Shipping_Methods</system_config_source_shipping_methods>
+                </rewrite>
+            </shippit>
+        </models>
+    </global>
+
+    <adminhtml>
+        <events>
+            <admin_system_config_changed_section_carriers>
+                <observers>
+                    <shippit_webshopappsmatrixrates_show_notification>
+                        <class>shippit_webshopappsmatrixrates/observer_system_config</class>
+                        <method>showNotification</method>
+                    </shippit_webshopappsmatrixrates_show_notification>
+                </observers>
+            </admin_system_config_changed_section_carriers>
+        </events>
+    </adminhtml>
+
+    <default>
+        <shippit>
+            <addon_webshopappsmatrixrates>
+                <active>0</active>
+            </addon_webshopappsmatrixrates>
+        </shippit>
+    </default>
+</config>

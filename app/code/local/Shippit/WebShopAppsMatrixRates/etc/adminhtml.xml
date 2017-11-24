@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Shippit Pty Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the terms
+ * that is available through the world-wide-web at this URL:
+ * http://www.shippit.com/terms
+ *
+ * @category   Shippit
+ * @copyright  Copyright (c) Shippit Pty Ltd (http://www.shippit.com)
+ * @author     Matthew Muscat <matthew@mamis.com.au>
+ * @license    http://www.shippit.com/terms
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <shippit_webshopappsmatrixrate>
+                                        <title>Shippit WebShopApps Matrix Rates</title>
+                                    </shippit_webshopappsmatrixrate>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

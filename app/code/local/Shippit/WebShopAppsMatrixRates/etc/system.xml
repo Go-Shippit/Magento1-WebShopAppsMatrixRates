@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Shippit Pty Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the terms
+ * that is available through the world-wide-web at this URL:
+ * http://www.shippit.com/terms
+ *
+ * @category   Shippit
+ * @copyright  Copyright (c) Shippit Pty Ltd (http://www.shippit.com)
+ * @author     Matthew Muscat <matthew@mamis.com.au>
+ * @license    http://www.shippit.com/terms
+ */
+-->
+<config>
+    <sections>
+        <shippit translate="label" module="shippit">
+            <groups>
+                <addon_webshopappsmatrixrates translate="label" module="shippit_webshopappsmatrixrates">
+                    <label>Addon - WebShopApps Matrix Rates</label>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                        <![CDATA[
+                            <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+                                <p>This addon module adds the ability to map shipping methods to the matrix rates created in the WebShopApps Matrix Rates Module.</p>
+                                <small><strong>Notes:</strong></small>
+                                <ul style="padding-left: 10px;">
+                                    <li>- <small>When updating the matrix rates, be sure to update your Shippit Shipping Method Mapping to reflect the new shipping methods available</small></li>
+                                    <li>- <small>When updating the matrix rates, previous orders will no longer be able to be mapped to a specific method, as the Matrix Rates module gives the new matrix rate methods a new unique identifier</small></li>
+                                </ul>
+                            </div>
+                        ]]>
+                    </comment>
+                    <fields>
+                        <version translate="label">
+                            <label>Version</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>shippit_webshopappsmatrixrates/adminhtml_system_config_form_fieldset_version</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                     </fields>
+                </addon_webshopappsmatrixrates>
+            </groups>
+        </shippit>
+    </sections>
+</config>
